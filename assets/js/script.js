@@ -9,6 +9,7 @@ function countdown() {
             timeLeft--;
         } else {
             timerEl.textcontent = 'Time remaining: 0';
+            timeLeft--;
 
             clearInterval(timeInterval);
         }
@@ -16,4 +17,4 @@ function countdown() {
 }
 
 
-countdown();
+//countdown();
