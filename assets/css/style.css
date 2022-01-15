@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    font-size: 20px;
+    color: white;
+    padding: 8px 12px;
+    background-color: #901fac; 
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 0;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header a {
+    text-decoration: none;
+}
+
+.title-page {
+    display: flex;
+    text-align: center;
+    display: grid;
+}
+
+.title-page button {
+    margin: auto;
+}
+
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+

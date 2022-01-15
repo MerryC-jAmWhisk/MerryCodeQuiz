@@ -5,8 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Quiz</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    
+    <header>
+        <a href="./view-highscores.html"><h3>View high scores</h3></a>
+        <h4 id="countdown">Time remaining: 75</h4>
+    </header>
+
+    <sections class="title-page">
+        <h1>Coding Quiz Challenge</h1>
+        <p>
+            Try to answer the following code related questions within the time limit. 
+            <br>
+            Keep in mind that incorrect answers will penalize your score/time by ten seconds.
+        </p>
+        <button>Start Quiz</button>
+    </sections>
+
+    <section class="questions">
+        <h2>Question </h2>
+        <ul class="no-bullets">
+            <li>
+                <button>1. answer</button>
+            </li>
+            <li>
+                <button>2. answer</button>
+            </li>
+            <li>
+                <button>3. answer</button>
+            </li>
+            <li>
+                <button>4. answer</button>
+            </li>
+        </ul>
+    </section>
+
+    <section class="finish">
+        <h2>All Done!</h2>
+        <p>Your final score is .</p>
+
+        <form id="initials-form">
+            <th>Enter initials: </th>
+            <td><input type="text" name="initials"/></td>
+            <td><button class="btn" id="save-initials" type="submit">Submit</button></td>
+        </form>
+    </section>
+
+
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
