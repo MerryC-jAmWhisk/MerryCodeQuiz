@@ -41,8 +41,8 @@ header a {
     margin: auto;
 }
 
-.questions {
-    display: flex;
+#questions {
+    /*display: flex;*/
     flex-direction: column;
 }
 
@@ -54,4 +54,8 @@ ul {
 .finish {
     display: flex;
     flex-direction: column;
+}
+
+.hide {
+    display: none;
 }
