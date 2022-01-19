@@ -28,16 +28,16 @@
             <h2 id="question-text">Question </h2>
             <ul class="no-bullets">
                 <li>
-                    <button>1. answer</button>
+                    <button class="answer" id="btn-1">1. answer</button>
                 </li>
                 <li>
-                    <button>2. answer</button>
+                    <button class="answer" id="btn-2">2. answer</button>
                 </li>
                 <li>
-                    <button>3. answer</button>
+                    <button class="answer" id="btn-3">3. answer</button>
                 </li>
                 <li>
-                    <button>4. answer</button>
+                    <button class="answer" id="btn-4">4. answer</button>
                 </li>
             </ul>
         </section>
@@ -48,9 +48,11 @@
     
             <form id="initials-form">
                 <th>Enter initials: </th>
-                <td><input type="text" name="initials"/></td>
+                <td><input type="text" id='initials' name="initials"/></td>
                 <td><button class="btn" id="save-initials" type="submit">Submit</button></td>
             </form>
+
+            <button>Play again</button>
         </section>
     </div>
 
