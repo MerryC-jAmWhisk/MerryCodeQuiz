@@ -41,6 +41,7 @@ var questions = [
 ];
 
 function startQuiz() {
+    // hides the title page when the quiz starts and display the questions
     titlePageEl.setAttribute('class', 'hide');
     questionSectionEl.removeAttribute('class');
     countdown();
@@ -48,7 +49,7 @@ function startQuiz() {
 };
 
 function displayQuestion() {
-    //get current question by current index
+    // get current question by current index
     questionTextEl.textContent = questions[questionNumber].question;
     // loop through the array of answers and display
     for (var i = 0; i < answerEl.length; i++) {
@@ -97,13 +98,10 @@ function highscore(event) {
 function countdown() {
 
     var timeInterval = setInterval(function () {
-        if (timeLeft > 0) {
+        if (timeLeft >= 0) {
             timerEl.textContent = 'Time remaining: ' + timeLeft;
             timeLeft--;
         } else {
-            timerEl.textcontent = 'Time remaining: 0';
-            timeLeft--;
-
             clearInterval(timeInterval);
         }
     }, 1000);
