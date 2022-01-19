@@ -54,7 +54,7 @@ function startQuiz() {
     questionSectionEl.removeAttribute('class', 'hide');
     countdown();
     displayQuestion();
-    console.log("start the quiz");
+    console.log("quiz start");
 };
 
 function displayQuestion() {
@@ -109,17 +109,18 @@ function highscore(event) {
 function countdown() {
 
     var timeInterval = setInterval(function () {
-        if (timeLeft > 0) {
+        if (timeLeft >= 1 && questionNumber > questions.length - 1) {
+            clearInterval(timeInterval);
+            gameover();
+            console.log("interval clear");
+            
+        } else if (timeLeft > 0) {
             timerEl.textContent = 'Time remaining: ' + timeLeft;
             timeLeft--;
             
         } else if (timeLeft === 0) {
             gameover();
             timerEl.textContent = 'Time remaining: ' + timeLeft;
-
-        } else if (questionNumber > questions.length - 1) {
-            clearInterval(timeInterval);
-            console.log("interval clear");
 
         } else {
             clearInterval(timeInterval);
