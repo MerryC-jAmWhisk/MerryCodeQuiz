@@ -98,9 +98,13 @@ function highscore(event) {
 function countdown() {
 
     var timeInterval = setInterval(function () {
-        if (timeLeft >= 0) {
+        if (timeLeft === 0) {
+            gameover();
+
+        } else if (timeLeft >= 0) {
             timerEl.textContent = 'Time remaining: ' + timeLeft;
             timeLeft--;
+
         } else {
             clearInterval(timeInterval);
         }
