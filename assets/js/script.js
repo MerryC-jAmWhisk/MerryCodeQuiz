@@ -8,6 +8,7 @@ var titlePageEl = document.getElementById('title-page');
 var gameoverEl = document.getElementById('finish');
 var answerEl = document.querySelectorAll('.answer');
 var submitEl = document.getElementById('save-initials');
+var playAgainEl = document.getElementById('play-again');
 var initialEl = document.getElementById('initials');
 var score = 0;
 
@@ -40,12 +41,20 @@ var questions = [
     }
 ];
 
+/*function playAgain() {
+    titlePageEl.removeAttribute('class', 'hide');
+    titlePageEl.setAttribute('class', 'title-page');
+    gameoverEl.setAttribute('class', 'hide');
+    startButtonEl.addEventListener('click', startQuiz);
+}*/
+
 function startQuiz() {
     // hides the title page when the quiz starts and display the questions
     titlePageEl.setAttribute('class', 'hide');
-    questionSectionEl.removeAttribute('class');
+    questionSectionEl.removeAttribute('class', 'hide');
     countdown();
     displayQuestion();
+    console.log("start the quiz");
 };
 
 function displayQuestion() {
@@ -84,6 +93,7 @@ function gameover() {
     questionSectionEl.setAttribute('class', 'hide');
     gameoverEl.removeAttribute('class', 'hide');
     submitEl.addEventListener("click", highscore);
+    //playAgainEl.addEventListener("click", playAgain);
 
 }
 
@@ -95,18 +105,25 @@ function highscore(event) {
 
 }
 
+//countdown timer
 function countdown() {
 
     var timeInterval = setInterval(function () {
-        if (timeLeft === 0) {
-            gameover();
-
-        } else if (timeLeft >= 0) {
+        if (timeLeft > 0) {
             timerEl.textContent = 'Time remaining: ' + timeLeft;
             timeLeft--;
+            
+        } else if (timeLeft === 0) {
+            gameover();
+            timerEl.textContent = 'Time remaining: ' + timeLeft;
+
+        } else if (questionNumber > questions.length - 1) {
+            clearInterval(timeInterval);
+            console.log("interval clear");
 
         } else {
             clearInterval(timeInterval);
+
         }
     }, 1000);
 }
