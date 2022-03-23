@@ -9,11 +9,11 @@
 </head>
 <body>
     <header>
-        <a href="./view-highscores.html"><h3>View high scores</h3></a>
+        <h3 id="view">View high scores</h3>
         <h4 id="countdown">Time remaining: 75</h4>
     </header>
 
-    <div class="content">
+    <div id="contents" class="content">
         <sections class="title-page" id="title-page">
             <h1>Coding Quiz Challenge</h1>
             <p>
@@ -44,19 +44,22 @@
     
         <section class="finish hide" id="finish">
             <h2>All Done!</h2>
-            <p>Your final score is .</p>
-    
+            <p id="final-score">Your final score is .</p>
+            
+            
             <form id="initials-form">
                 <th>Enter initials: </th>
                 <td><input type="text" id="initials" name="initials"/></td>
                 <td><button class="btn" id="save-initials" type="submit">Submit</button></td>
             </form>
-
+            
             <button id="play-again">Play again</button>
+            
         </section>
     </div>
 
-
+    <div id="score-page"></div>
+    
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
